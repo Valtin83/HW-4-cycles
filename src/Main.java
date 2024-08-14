@@ -54,7 +54,8 @@ public class Main {
         int sum = 0;
         for (int i = 1; i < 13; i++) {
             sum = sum + contribution;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + sum + " рублей». ");
+            System.out.println("Месяц " + i + ", сумма накоплений равна " +
+                    sum + " рублей.");
         }
 
         System.out.println("Задача №9");
@@ -65,7 +66,8 @@ public class Main {
         for (int i = 1; i < 13; i++) {
             sum2 = sum2 + contribution2;
             sum2 = sum2 + sum2 / 100;
-            System.out.println("Месяц " + i + ", сумма накоплений равна " + sum2 + " рублей». ");
+            System.out.println("Месяц " + i + ", сумма накоплений равна " +
+                    sum2 + " рублей.");
         }
 
         System.out.println("Задача №10");
