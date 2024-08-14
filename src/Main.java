@@ -29,5 +29,16 @@ public class Main {
 
         System.out.println("Задача №3");
         //
+        int population = 12_000_000;
+        for (int i1 = 1; i1 <= 10; i1++) {
+            int birthRate = 17 * population / 1000;
+            int deathRate = 8 * population / 1000;
+            population = population + birthRate - deathRate;
+            System.out.println("Год " + i1 + ", численность населения составляет " +
+                    population);
+        }
+
+        System.out.println("Задача №4");
+
     }
 }
