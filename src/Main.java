@@ -16,7 +16,7 @@ public class Main {
 
         System.out.println("Задача №3");
         // все чётные числа от 0 до 17
-        for (int i = 2; i < 17; i = i + 2) {
+        for (int i = 2; i <= 17; i = i + 2) {
             System.out.print(i + " ");
         }
         System.out.println();
@@ -35,8 +35,8 @@ public class Main {
         }
 
         System.out.println("Задача №6");
-        // последовательность чисел от 7 до 98, i = i + 7, 98 + 7 =105
-        for (int i = 7; i < 105; i = i + 7) {
+        // последовательность чисел от 7 до 98, i = i + 7
+        for (int i = 7; i <= 98; i = i + 7) {
             System.out.print(i + " ");
         }
         System.out.println();
@@ -63,8 +63,8 @@ public class Main {
         int contribution2 = 29000;
         int sum2 = 0;
         for (int i = 1; i < 13; i++) {
-            sum2 = sum2 + contribution2 / 100;
             sum2 = sum2 + contribution2;
+            sum2 = sum2 + sum2 / 100;
             System.out.println("Месяц " + i + ", сумма накоплений равна " + sum2 + " рублей». ");
         }
 
