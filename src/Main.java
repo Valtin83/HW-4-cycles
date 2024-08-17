@@ -2,13 +2,15 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Задача №1");
         // сколько месяцев потребуется, чтобы накопить 2 459 000 рублей
-        int accumulation = 2_459_000;
+        final int ACCUMULATION = 2_459_000;
         int totalSum = 0; // сумма итогового накопления
         int month = 0; // месяцы
-        int contribution = 15_000; // ежемесячный вклад
-        while (totalSum < accumulation) {
+        final int CONTRIBUTION = 15_000; // ежемесячный вклад
+        double percent = 1D / 100;
+        while (totalSum < ACCUMULATION) {
+            totalSum = (int) (totalSum * (1 + percent));
             month++;
-            totalSum = totalSum + contribution;
+            totalSum = totalSum + CONTRIBUTION;
             System.out.println("Месяц " + month + "-й, сумма накоплений равна " +
                     totalSum + " рублей");
         }
@@ -28,25 +30,25 @@ public class Main {
 
         System.out.println("Задача №3");
         // прирост населения в течении 10 лет
-        int population = 12_000_000;
+        final int POPULATION = 12_000_000;
         int birthPerThousand = 17;
         int deathPerThousand = 8;
         for (int i1 = 1; i1 <= 10; i1++) {
-            int birthRate = birthPerThousand * population / 1000;
-            int deathRate = deathPerThousand * population / 1000;
-            population = population + birthRate - deathRate;
+            int birthRate = birthPerThousand * POPULATION / 1000;
+            int deathRate = deathPerThousand * POPULATION / 1000;
+            int populationTotal = POPULATION + birthRate - deathRate;
             System.out.println("Год " + i1 + "-й, численность населения составляет " +
-                    population);
+                    populationTotal);
         }
 
         System.out.println("Задача №4");
         // накопление под 7% ежемесячно
-        int sum = 15_000;
-        double percent = 7D / 100;
-        int finalAmount = 12_000_000;
+        int sum = CONTRIBUTION;
+        percent = 7D / 100;
+        final int FINAL_AMOUNT = 12_000_000;
         month = 0;
-        while (sum < finalAmount) {
-            sum = (int) (sum * (1 + percent));
+        while (sum < FINAL_AMOUNT) {
+          sum = (int) (sum * (1 + percent));
             month++;
 
             System.out.println("Месяц " + month + "-й, сумма накоплений равна " +
@@ -54,9 +56,9 @@ public class Main {
         }
         System.out.println("Задача №5");
         // вывести в консоль каждый 6-й месяц
-        sum = 15_000;
+        sum = CONTRIBUTION;
         month = 0;
-        while (sum < finalAmount) {
+        while (sum < FINAL_AMOUNT) {
             sum = (int) (sum * (1 + percent));
             month++;
             if (month % 6 == 0) {
@@ -66,7 +68,7 @@ public class Main {
         }
         System.out.println("Задача №6");
         // накопления за 9 лет, с отчётом каждые полгода
-        sum = 15_000;
+        sum = CONTRIBUTION;
         month = 0;
         int months = 12 * 9; // кол-во месяцев за 9 лет
         while (month < months) {
