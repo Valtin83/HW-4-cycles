@@ -14,7 +14,6 @@ public class Main {
             System.out.println("Месяц " + month + "-й, сумма накоплений равна " +
                     totalSum + " рублей");
         }
-
         System.out.println("Задача №2");
         // числа от 1 до 10 одной строкой через пробел
         int a = 0;
@@ -39,41 +38,48 @@ public class Main {
             int populationTotal = POPULATION + birthRate - deathRate;
             System.out.println("Год " + i1 + "-й, численность населения составляет " +
                     populationTotal);
+
         }
 
         System.out.println("Задача №4");
         // накопление под 7% ежемесячно
-        int sum = CONTRIBUTION;
+        totalSum = CONTRIBUTION; // ежемесячный вклад
         percent = 7D / 100;
         final int FINAL_AMOUNT = 12_000_000;
         month = 0;
-        while (sum < FINAL_AMOUNT) {
-            sum = (int) (sum * (1 + percent));
+        while (totalSum < FINAL_AMOUNT) {
+            totalSum = (int) (totalSum * (1 + percent));
             month++;
 
             System.out.println("Месяц " + month + "-й, сумма накоплений равна " +
-                    sum + " рублей");
+                    totalSum + " рублей");
+
         }
+
         System.out.println("Задача №5");
         // вывести в консоль каждый 6-й месяц
         month = 0;
-        while (sum < FINAL_AMOUNT) {
-            sum = (int) (sum * (1 + percent));
+        totalSum = CONTRIBUTION;// ежемесячный вклад
+        while (totalSum < FINAL_AMOUNT) {
+            totalSum = (int) (totalSum * (1 + percent));
             month++;
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + "-й, сумма накоплений равна " +
-                        sum + " рублей");
+                        totalSum + " рублей");
             }
         }
+
         System.out.println("Задача №6");
         // накопления за 9 лет, с отчётом каждые полгода
+        totalSum = CONTRIBUTION; // ежемесячный вклад
+        month = 0;
         int months = 12 * 9; // кол-во месяцев за 9 лет
         while (month < months) {
-            sum = (int) (sum * (1 + percent));
+            totalSum = (int) (totalSum * (1 + percent));
             month++;
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + "-й, сумма накоплений равна " +
-                        sum + " рублей");
+                        totalSum + " рублей");
             }
         }
 
@@ -95,6 +101,10 @@ public class Main {
             if (year > start) {
                 System.out.println(year);
             }
+
         }
     }
+
 }
+
+
