@@ -48,7 +48,7 @@ public class Main {
         final int FINAL_AMOUNT = 12_000_000;
         month = 0;
         while (sum < FINAL_AMOUNT) {
-          sum = (int) (sum * (1 + percent));
+            sum = (int) (sum * (1 + percent));
             month++;
 
             System.out.println("Месяц " + month + "-й, сумма накоплений равна " +
@@ -56,7 +56,6 @@ public class Main {
         }
         System.out.println("Задача №5");
         // вывести в консоль каждый 6-й месяц
-        sum = CONTRIBUTION;
         month = 0;
         while (sum < FINAL_AMOUNT) {
             sum = (int) (sum * (1 + percent));
@@ -68,8 +67,6 @@ public class Main {
         }
         System.out.println("Задача №6");
         // накопления за 9 лет, с отчётом каждые полгода
-        sum = CONTRIBUTION;
-        month = 0;
         int months = 12 * 9; // кол-во месяцев за 9 лет
         while (month < months) {
             sum = (int) (sum * (1 + percent));
